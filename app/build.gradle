@@ -3,6 +3,8 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-parcelize'
     id 'kotlin-kapt'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
 }
 
 android {
@@ -56,5 +58,7 @@ dependencies {
     implementation 'com.tbuonomo:dotsindicator:4.2'
     implementation "com.squareup.okhttp3:logging-interceptor:$rootProject.ext.retrofit_okhttp_version"
     implementation "com.squareup.retrofit2:converter-gson:$rootProject.ext.retrofit_version"
+    implementation 'com.google.firebase:firebase-crashlytics:18.3.7'
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:12.0.0'
 
 }

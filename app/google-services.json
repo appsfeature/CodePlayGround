@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "529053736438",
+    "project_id": "codeplayground-da988",
+    "storage_bucket": "codeplayground-da988.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:529053736438:android:04c21985fe99b5a5f5bbd7",
+        "android_client_info": {
+          "package_name": "com.example.codeplayground"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "529053736438-haj6hf66tnkp7tqpvk72rotangu9u96k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrj-qSvnKXffwIwOn1lNyGQMilElZGEP8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "529053736438-haj6hf66tnkp7tqpvk72rotangu9u96k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
