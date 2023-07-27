@@ -26,10 +26,10 @@ public class YoutubePlayerActivity extends AppCompatActivity {
 
     private static final String TAG = "@Test";
     private static final String mVideoId = "S0Q4gqBUs7c";
+    private float mStartTime = 0;
 
     private YouTubePlayerView youTubePlayerView;
     private YouTubePlayerTracker tracker;
-    private float mStartTime = 0;
     private FrameLayout  fullscreenViewContainer;
     private boolean isFullScreen;
 
@@ -61,9 +61,8 @@ public class YoutubePlayerActivity extends AppCompatActivity {
         youTubePlayerView.getYouTubePlayerWhenReady(youTubePlayer -> {
             youTubePlayer.addListener(tracker);
             PlayerConstants.PlayerState state = tracker.getState();
-            float currentSecond = tracker.getCurrentSecond();
-            float duration = tracker.getVideoDuration();
-            String videoId = tracker.getVideoId();
+            float currentSecond = getCurrentPlayedTime();
+            float duration = getVideoDuration();
             Log.d(TAG, "currentSecond : " + currentSecond);
         });
 
@@ -84,6 +83,23 @@ public class YoutubePlayerActivity extends AppCompatActivity {
                 fullscreenViewContainer.removeAllViews();
             }
         });
+    }
+
+    /**
+     * @return current played time in millis.
+     */
+    private float getCurrentPlayedTime() {
+        if(youTubePlayer != null){
+            return tracker.getCurrentSecond() * 1000;
+        }
+        return 0;
+    }
+
+    private float getVideoDuration() {
+        if(youTubePlayer != null){
+            return tracker.getVideoDuration();
+        }
+        return 0;
     }
 
     private void custom() {
